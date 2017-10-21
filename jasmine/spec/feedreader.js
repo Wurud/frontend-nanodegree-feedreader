@@ -98,13 +98,17 @@ $(function() {
      * Remember, loadFeed() is asynchronous so this test will require
      * the use of Jasmine's beforeEach and asynchronous done() function.
      */
+
     var rows;
 
-    //To test the asynchronicity for loadFeed function
+    //To load data before start testing.
     beforeEach(function(done) {
-      loadFeed(0, done);
+      loadFeed(0, function() {
+        done();
+      });
     });
 
+    //Test if .entry have a one row at least.
     it('it has at a onle element in the .entry within .feed container', function() {
       rows = $('.entry').length;
       expect(rows).not.toEqual(0);
