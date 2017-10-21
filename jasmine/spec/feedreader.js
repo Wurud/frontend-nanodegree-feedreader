@@ -98,14 +98,15 @@ $(function() {
      * Remember, loadFeed() is asynchronous so this test will require
      * the use of Jasmine's beforeEach and asynchronous done() function.
      */
+    var rows;
 
-    //https://metabroadcast.com/blog/asynchronous-testing-with-jasmine
+    //To test the asynchronicity for loadFeed function
     beforeEach(function(done) {
       loadFeed(0, done);
     });
 
-    it('it has at least a single .entry', function() {
-      var rows = $('.entry').length;
+    it('it has at a onle element in the .entry within .feed container', function() {
+      rows = $('.entry').length;
       expect(rows).not.toEqual(0);
     });
   });
