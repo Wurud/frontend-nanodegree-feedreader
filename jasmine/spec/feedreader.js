@@ -104,13 +104,13 @@ $(function() {
     //To load data before start testing.
     beforeEach(function(done) {
       loadFeed(0, function() {
+        //Test if .entry have a one row at least.
+        rows = $('.entry').length;
         done();
       });
     });
 
-    //Test if .entry have a one row at least.
     it('it has at a onle element in the .entry within .feed container', function() {
-      rows = $('.entry').length;
       expect(rows).not.toEqual(0);
     });
   });
