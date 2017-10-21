@@ -4,7 +4,7 @@ In this project you are given a web-based application that reads RSS feeds. The 
 
 ##Getting started
 
-* Download or clone the project > open the index file to check Jasmine test cases.
+* Download or clone the project > open the index file to check Jasmine test cases at the end of the page.
 * Check jasmine > spec > feedreader.js for more details.
 
 
