@@ -56,7 +56,6 @@ $(function() {
      * /clicked and does it hide when clicked again.
      */
     it('display when it is clicked', function() {
-      body = document.body;
 
       //Description: to ensue the menu is hidden by defult
       expect($('body').hasClass("menu-hidden")).toBe(true);;
