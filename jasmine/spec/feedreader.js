@@ -44,10 +44,12 @@ $(function() {
   describe('The menu', function() {
 
     var icon = document.querySelector('.menu-icon-link');
+    var body;
 
     //Description: to ensures the menu element is hidden by default.
     it('Is hidden by defult', function() {
-      expect($('body').hasClass("menu-hidden")).toBe(true);
+      body = $('body').hasClass("menu-hidden");
+      expect(body).toBe(true);
     });
 
     /* Description: ensures the menu changes
@@ -57,15 +59,17 @@ $(function() {
      */
     it('display when it is clicked', function() {
 
+      body = $('body').hasClass("menu-hidden");
       //Description: to ensue the menu is hidden by defult
-      expect($('body').hasClass("menu-hidden")).toBe(true);;
+      expect(body).toBe(true);
 
       //Description: to ensue the menu is displayed after one click
+      //THIS PART DISPLAY AN ERROR.
       icon.click();
-      expect($('body').hasClass("menu-hidden")).toBe(false);
+      expect(body).toBe(false);
 
       icon.click();
-      expect($('body').hasClass("menu-hidden")).toBe(true);
+      expect(body).toBe(true);
     });
 
   });
