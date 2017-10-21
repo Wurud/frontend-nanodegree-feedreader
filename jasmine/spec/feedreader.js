@@ -64,7 +64,7 @@ $(function() {
       expect(body).toBe(true);
 
       //Description: to ensue the menu is displayed after one click
-      //THIS PART DISPLAY AN ERROR.
+      //ERROR: expected value true which is not the case, it should be false.
       icon.click();
       expect(body).toBe(false);
 
