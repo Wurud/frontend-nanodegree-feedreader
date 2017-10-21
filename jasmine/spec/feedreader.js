@@ -64,7 +64,6 @@ $(function() {
       expect(body).toBe(true);
 
       //Description: to ensue the menu is displayed after one click
-      //ERROR: expected value true which is not the case, it should be false.
       icon.click();
       expect(body).toBe(false);
 
@@ -115,7 +114,6 @@ $(function() {
         rowTwo = document.querySelector('.feed').innerHTML;
 
         //The callback function will be executed after the function it belongs to finishes.
-        //In the index.html(SPEC HAS NO EXPECTATIONS it will ensure the feed is loaded and updated)
         expect(rowOne).not.toBe(rowTwo);
         done();
       });
